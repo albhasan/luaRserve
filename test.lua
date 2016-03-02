@@ -18,7 +18,7 @@ lrs.version()
 lrs.getserverid("localhost", 6311)
 
 -- ask Rserve for 100 random numbers
-printtable(lrs.evaluate("localhost", 6311, "rnorm(100)"), "-->")
+printtable(lrs.evaluate("localhost", 6311, "rnorm(10)"), "-->")
 
 -- ask Rserve for a random number
 printtable(lrs.evaluate("localhost", 6311, "runif(1, 5.0, 7.5)"), "-->")

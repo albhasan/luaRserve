@@ -112,7 +112,7 @@ end
 -------------------------------------
 local function parsesexp(sexp)
   if #sexp < 4 then
-    print("ERROR: Invalid SEXP (too short) - " .. #sexp)
+    print("WARNING: Invalid SEXP (too short) - " .. #sexp)
     return nil
   end
   local sexpexps = {}
@@ -154,6 +154,8 @@ local function parsesexp(sexp)
     elseif header.exptype == 36 then                          -- XT_ARRAY_BOOL
       local len = vstruct.read("u4", string.sub(content, 1, 4))[1]
       data = vstruct.read(len .. "*b1", string.sub(content, 5))
+    elseif header.exptype == 48 then                          -- XT_UNKNOWN
+        data = "XT_UNKNOWN"
     else
       print("ERROR: unknown QAP1 expression type:" .. header.exptype)
       return nil
