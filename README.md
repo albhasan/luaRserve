@@ -1,6 +1,6 @@
 # luaRserve
 
-Execute R expressions from LUA through Rserve. <code>luarserve</code> is a Lua module that enables data sharing among the programming languages Lua and R through R's package Rserve. The client-server communication is handled through TCP using Lua's module luasocket. R's datatypes are mapped to Lua tables following the structure of Rserve's <a href="http://rforge.net/Rserve/dev.html">QAP1 protocol</a>.
+Execute R expressions from LUA through Rserve. <code>luarserve</code> is a Lua module that enables data sharing among the programming languages Lua and R through R's package Rserve. The client-server communication is handled through TCP using Lua's module <code>luasocket</code>. R's datatypes are mapped to Lua tables following the structure of Rserve's <a href="http://rforge.net/Rserve/dev.html">QAP1 protocol</a>.
 
 
 
@@ -65,7 +65,8 @@ Execute R expressions from LUA through Rserve. <code>luarserve</code> is a Lua m
 
   <h3>Notes:</h3>
   <ul>
-    <li>So far, this module just maps R's datyatypes to Lua' table. The client must handle further data transformation to other Lua structures (e.g matrixes or vectors).</li>
+    <li>This module just maps R's datyatypes to Lua' table. The client must handle further data transformation to other Lua structures (e.g matrixes or vectors).</li>
+    <li>This module has been tested on linux, precisely <code>Ubuntu 14.4</code> using <code>Lua 5.2.3</code>, <code>LuaSocket 3.0-rc1</code>, and <code>vstruct 2.0.0</code>.</li>
   </ul>
 
 
