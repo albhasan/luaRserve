@@ -45,6 +45,11 @@ Execute R expressions from LUA through Rserve. <code>luarserve</code> is a Lua m
     <li><code>make</code></li>
     <li><code>sudo make install</code></li>
     <li><code>cd ..</code></li>
+    <li><b>NOTE</b>: If luasocket compilation fails because of missing headers (e.g. lua.h),copy them to the common header folder. In the case of Lua 5.1 o a linux machine, you can create symbolic links like this:
+      <li><code>sudo ln -s /usr/include/lua5.1/lua.h /usr/include/lua.h</code></li>
+      <li><code>sudo ln -s /usr/include/lua5.1/luaconf.h /usr/include/luaconf.h</code></li>
+      <li><code>sudo ln -s /usr/include/lua5.1/lauxlib.h /usr/include/lauxlib.h </code></li>
+    </li>
   </ol>
   <li>Set the environment variables. In the terminal type:</li>
   <ol>
