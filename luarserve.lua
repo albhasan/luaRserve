@@ -205,6 +205,7 @@ end
 -- @param msg       Message to be sent
 -------------------------------------
 function calltcp(rsserver, rsport, msg)
+  tcp = socket.tcp() -- mvh 20160902
   tcp:settimeout(1, 'b')
   tcp:connect(rsserver, rsport)
   if msg and msg ~= " " then
