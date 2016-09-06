@@ -66,7 +66,7 @@ Execute R expressions from LUA through Rserve. <code>luarserve</code> is a Lua m
 
   <li>Clone luaRserve:</li>
   <ol>
-    <li><code>git https://github.com/albhasan/luaRserve.git</code></li>
+    <li><code>git clone https://github.com/albhasan/luaRserve.git</code></li>
   </ol>
 
   <li>Test luaRserve:</li>
